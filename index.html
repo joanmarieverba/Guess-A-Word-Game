@@ -2,71 +2,45 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8" />
-    <title>Joan Marie Verba's Bootstrap Portfolio</title>
+    <title>Joan Marie Verba's Hangman Word Game</title>
     <meta name=“viewport” content=“width=device-width,initial-scale=1”>
     <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <link rel="stylesheet" href="./assets/css/style.css">
 
   </head>
 
 <body>
 
-  <nav class="navbar">
-    <div class="container-fluid">
-      <div class="navbar-header">
-        <p class="navbar-text">Joan Marie Verba</p>
-      </div>
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">About</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
 
   <div class="container">
+
+    <div class="jumbotron">
+      <h1>Hangman Word Game</h1>
+      <h2>Astronomy terms</h2>
+    </div>
+
     <div class="row">
 
-      <div class="col-md-8 col-xs-12">
-        <div class="leftbox">
-            <h1>About Me</h1>
-
-               <div class="innerbox">
-                  <div class="col-xs-6 col-md-3">
-                    <a href="#" class="thumbnail">
-                      <img src="./assets/images/jmv.jpg" alt="me">
-                    </a>
-                  </div>
-
-                    <p>
-                      <h4>Hello, I'm Joan Marie Verba. I'm a Front End developer, and I believe that the goal of web development is to make applications/web
-                        pages that present users with the information they want in the style they prefer. I find this both challenging and exciting,
-                        and is one of the reasons I find coding so much fun.
-                      </h4>
-                    </p>
-                    <p>
-                      <h4>In addition to my web developing skills, I am the author of the nonfiction books Voyager: Exploring the Outer Planets,
-                        Boldly Writing and Weight Loss Success!, as well as the novels Countdown to Action!, Action Alert!, Deadly Danger!, Situation:
-                        Critical!, Extreme Hazard!, and Danger Zone! plus numerous short stories and articles...
-                      </h4>
-                    </p>
-                </div>
-        </div>
+      <div class="col-md-2">
       </div>
-      <div class="col-md-4 col-xs-12">
-        <div class="social">
-            <h2>Connect with Me</h2>
-            <div class="innerbox">
-                <ul>
-                  <li><a href="http://github.com/joanmarieverba"><img src="./assets/images/github_square.png" width="50" height="50" alt="GitHub"></a></li>
-                  <li><a href="https://www.linkedin.com/in/joan-marie-verba-39750a19/"><img src="./assets/images/linkedin-blue.png" width="50" height="50" alt="LinkedIn"></a></li>
-                  <li><a href="https://stackoverflow.com/users/7410937/joan-marie"><img src="./assets/images/stack_overflow.png" width="50" height="50" alt="Stack Overflow"></a></li>
-                </ul>
-            </div>
-        </div>
+
+      <div class="col-md-8 col-xs-12">
+
+          <div class="guessbox">
+
+            <h4>Press any key to start</h4>
+
+            <h4>Current Word</h4>
+
+            <h4>Number of Guesses Remaining</h4>
+
+            <h4>Letters Already Guessed</h4>
+
+          </div>
+
       </div>
 
     </div>
@@ -80,14 +54,9 @@
     &nbsp
   </div>
 
-    <div class="row">
-        <footer>
-          <bottomborder></bottomborder>
-          Copyright &copy 2018 Joan Marie Verba
-        </footer>
-    </div>
 
 
 
+  <script src="./assets/javascript/game.js"></script>
 </body>
 </html>

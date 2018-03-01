@@ -1,90 +1,6 @@
 body {
-    background-color: #dddddd;
+    background-image: url("http://jmvtestsite.com/wp-content/uploads/2016/07/1.jpg");
     min-height: 100%;
-}
-
-html {
-  min-height: 100%;
-}
-
-li {
-    display: inline-block;
-    /*top right bottom left*/
-    margin: 0 20px 0 20px;
-    padding: 0;
-}
-
-a {
-    font-size: 18px;
-}
-
-nav ul {
-    top: 0;
-    right: 0px;
-    position: absolute;
-}
-
-.leftbox {
-    width: 100%;
-    border: 1px solid #000;
-    text-align: left;
-    background-color: #ffffff;
-    margin-top: 20px;
-    margin-right: 40px;
-}
-
-.social {
-    display: inline-block;
-    width: 100%;
-    border: 1px solid #000;
-    text-align: center;
-    background-color: #ffffff;
-    margin-top: 20px;
-    float: left;
-}
-
-.innerbox {
-    padding: 20px;
-    border-top: 1px solid black;
-    background-color: #ffffff;
-    margin: 10px;
-}
-
-.innerbox ul li {
-    display: inline-block;
-    margin: 0;
-    padding: 0;
-}
-
-.innerbox ul {
-    padding: 0;
-}
-
-.navbar {
-    background-color: #ffffff;
-    width: 100%;
-    margin-right: 0px;
-    padding-right: 0px;
-    right: 0;
-    position: fixed;
-
-}
-
-.navbar-text {
-    margin-left: 55px;
-    border: 1px solid #000;
-    text-align: center;
-    background-color: #4aaaa5;
-    color: #ffffff;
-    font-family: 'Georgia', serif;
-    font-size: 20px;
-    font-weight: bold;
-    width: 200px;
-    height: 50px;
-    top: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 8px;
 }
 
 .container {
@@ -93,9 +9,9 @@ nav ul {
 
 h1 {
     color: #4aaaa5;
-    font-family: 'Georgia', serif;
+    font-family: 'Orbitron';
     font-size: 24px;
-    text-align: left;
+    text-align: center;
     padding-left: 10px;
     font-weight: bold;
 }
@@ -103,104 +19,20 @@ h1 {
 
 h2 {
     color: #4aaaa5;
-    font-family: 'Georgia', serif;
+    font-family: 'Orbitron';
     font-size: 22px;
     text-align: center;
     font-weight: bold;
 }
 
 h4 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Georgia', serif;
     font-weight: normal;
     padding-top: 0;
     line-height: 1.5;
 }
 
-.boxwidth {
-  width: 50vw;
-}
-
-.msgbox {
-  width: 50vw;
-  height: 130px;
-}
-
-bottomborder {
-    background-color: #4aaaa5;
-    height: 10px;
-    position: absolute;
-    left: 0;
-    right:0;
-    width: 100%;
-    bottom: 40px;
-}
-
-footer {
-    background-color: #666666;
-    color: #dddddd;
-    font-size: 12px;
-    text-align: center;
-    height: 40px;
-    padding-top: 10px;
-    position: relative;
-    width: 100%;
-    bottom: 0;
-}
-
-otherfooter {
-    background-color: #666666;
-    color: #dddddd;
-    font-size: 12px;
-    text-align: center;
-    height: 40px;
-    padding-top: 10px;
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-    margin-right: 0px;
-    padding-right: 0px;
-    right: 0;
-}
-
-.button {
-    background-color: #4aaaa5;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-
-div.item {
-    vertical-align: top;
-    display: inline-block;
-    text-align: center;
-    width: 150px;
-    margin-right: 140px;
-    position: relative;
-}
-
-.caption {
-  background-color: #4aaaa5;
-  height: 30px;
-  position: relative;
-  margin-top: -60px;
-  margin-left: 0px;
-  color: #ffffff;
-  text-align: center;
-  font-size: 20px;
-}
-
-.rowspace {
-    margin-top: 60px;
-}
-
-.imgsize img {
-    height: 150px;
-    width: 250px;
+.guessbox {
+  background-color: white;
+  padding: 10px;
 }
