@@ -21,3 +21,5 @@ palindromeChecker ("wow");
 palindromeChecker ("Was it a car or a cat I saw")
 palindromeChecker("A man, a plan, a canal, Panama")
 palindromeChecker ("This is a palindrome!")
+
+const wordList = ["Mercury", "Venus", "Earth", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Sun", "Stars", "Galaxy", "Supernova", "Asteroids", "Titan", "Nebula", "Orbit", "Comet", "Satellite"]
