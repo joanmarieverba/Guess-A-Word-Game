@@ -20,14 +20,15 @@ for (i = 1; i < numberOfLetters; i++) {
 while (success === " " && guessNumber > 0) {
         // display current word with underscores in place of letters
         let display = displayWord.toString();
-        document.getElementById("demo").innerHTML = display.replace(/,/g , " ");
+        $("#demo").text(display.replace(/,/g, " "));
 
         //display number of guesses remaining
-        document.getElementById("numguess").innerHTML = guessNumber;
+        $("#numguess").text(guessNumber);
 
         //display letters already guessed
-        document.getElementById("already").innerHTML = alreadyGuessed;
+        $("#already").text(alreadyGuessed);
 
+        //enter a guess
         let currentGuess = prompt("Input one letter ").toLowerCase();
 
         guessNumber = guessNumber - 1;
@@ -41,17 +42,15 @@ while (success === " " && guessNumber > 0) {
 
         if (currentWord.toString() === displayWord.toString()) {
             success = "SUCCESS!!"
-            document.getElementById("gameover").innerHTML = success;
+            $("#gameover").text(success);
+            
         }
         if (guessNumber === 0) {
             success = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]}`;
+            $("#gameover").text(success);
         }
- }
+}
 
 
-// document.addEventListener('keypress', (event) => {
-//   const keyName = event.key;
 
-//   alert('keypress event\n\n' + 'key: ' + keyName);
-// });
 
