@@ -21,21 +21,19 @@ for (i = 1; i < numberOfLetters; i++) {
 }
 
 function Hangman (currentGuess) {
-    console.log("done ", done, "number of guesses ", numberOfGuesses)
+
     if (!done && numberOfGuesses > 0) {
         // display current word with underscores in place of letters
         let display = displayWord.toString();
         if (!notFirst) {$("#demo").text(display.replace(/,/g, " "));}
 
-        console.log (display);
+        console.log ("currentGuess ", currentGuess, "notFirst ", notFirst);
 
         //display number of guesses remaining
         $("#numguess").text(numberOfGuesses);
-
-    
-
         numberOfGuesses = numberOfGuesses - 1;
 
+        //add current guess to display
         for (i = 0; i < numberOfLetters; i++) {
             if (notFirst && currentWordArray[i].toLowerCase() === currentGuess) {
                 displayWord[i] = currentGuess;
@@ -45,34 +43,55 @@ function Hangman (currentGuess) {
 
         //display letters already guessed
         //revise display word
-        console.log ("alreadyGuessed ", alreadyGuessed, "currentGuess ", currentGuess);
         if (notFirst) {
             alreadyGuessed = alreadyGuessed.concat(currentGuess);
-            $("#demo").text(display.replace(/,/g, " ")); 
+            $("#demo").text(display.replace(/,/g, " "));
+            $("#already").text(alreadyGuessed);
+        } else {
+            alreadyGuessed = " ";
             $("#already").text(alreadyGuessed);
         };
-      
-        
 
-       
-       
-        
-        console.log("currentWord ", currentWord, "displayWord ", displayWord.toString().replace(/,/g, ""));
+        $("#gameover").text(message);
+
+
+        // if word guessed correctly, output success
         if (currentWord.toString().toLowerCase() === displayWord.toString().replace(/,/g, "")) {
-             message = "SUCCESS!!"
+            message = "SUCCESS!!  Press any key to try again."
             $("#gameover").text(message);
             done = true;
             numberOfWins++;
             $("#numwins").text(numberOfWins);
         }
+        //if number of guesses succeeded, output failure
         if (numberOfGuesses === 0) {
-            message = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]}`;
+            message = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]} Press any key to try again`;
             $("#gameover").text(message);
             done = true;
             $("#numwins").text(numberOfWins);
         }
+        notFirst = true;
+        //choose another word, reset
+        if (done) {
+          gameNumber++;
+          done = false;
+          notFirst = false;
+          message = " ";
+          numberOfGuesses = 12;
+          currentWord = wordList[gameNumber];
+          currentWordArray = currentWord.split('');
+          numberOfLetters = currentWordArray.length;
+          displayWord = ["_"];
+          alreadyGuessed = " ";
+          i = 1;
+          console.log ("notFirst ", notFirst, "message ", message);
+          for (i = 1; i < numberOfLetters; i++) {
+              displayWord.push("_");
+          }
+
+        }
     }
-    notFirst = true;
+
 }
 
 
@@ -85,5 +104,3 @@ document.onkeyup = function (event) {
     Hangman(letter);
 
 }
-
-
