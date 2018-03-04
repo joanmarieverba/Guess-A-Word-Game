@@ -2,6 +2,7 @@
 
 let gameNumber = 0;
 let numberOfGuesses = 12;
+let numberOfWins = 0;
 
 const wordList = ["Mercury", "Venus", "Earth", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Sun", "Stars", "Galaxy", "Supernova", "Asteroids", "Titan", "Nebula", "Orbit", "Comet", "Satellite"]
 let done = false;
@@ -61,12 +62,14 @@ function Hangman (currentGuess) {
              message = "SUCCESS!!"
             $("#gameover").text(message);
             done = true;
-
+            numberOfWins++;
+            $("#numwins").text(numberOfWins);
         }
         if (numberOfGuesses === 0) {
             message = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]}`;
             $("#gameover").text(message);
             done = true;
+            $("#numwins").text(numberOfWins);
         }
     }
     notFirst = true;
