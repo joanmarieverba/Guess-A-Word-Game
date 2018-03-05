@@ -54,7 +54,6 @@ function Hangman (currentGuess) {
 
         $("#gameover").text(message);
 
-
         // if word guessed correctly, output success
         if (currentWord.toString().toLowerCase() === displayWord.toString().replace(/,/g, "")) {
             message = "SUCCESS!!  Press any key to try again."
@@ -93,7 +92,6 @@ function Hangman (currentGuess) {
     }
 
 }
-
 
 // Captures keyboard input. Depending on the letter pressed it will "call" (execute) different functions.
 document.onkeyup = function (event) {
