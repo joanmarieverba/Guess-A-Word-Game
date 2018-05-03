@@ -4,7 +4,7 @@ let gameNumber = 0;
 let numberOfGuesses = 12;
 let numberOfWins = 0;
 
-const wordList = ["Mercury", "Venus", "Earth", "Moon", "Mars", "Jupiter", "Saturn", "Uranus", "Neptune", "Pluto", "Sun", "Stars", "Galaxy", "Supernova", "Asteroids", "Titan", "Nebula", "Orbit", "Comet", "Satellite"]
+const wordList = ["Mercury", "Supernova", "Venus", "Galaxy", "Earth", "Asteroid", "Moon", "Nebula", "Mars", "Comet", "Jupiter", "Star", "Saturn", "Orbit", "Uranus", "Neptune", "Pluto", "Sun", "Titan", "Satellite"];
 let done = false;
 let notFirst = false;
 let message = " ";
@@ -20,7 +20,7 @@ for (i = 1; i < numberOfLetters; i++) {
     displayWord.push("_");
 }
 
-function Hangman (currentGuess) {
+function wordGame (currentGuess) {
 
     if (!done && numberOfGuesses > 0) {
         // display current word with underscores in place of letters
@@ -64,7 +64,7 @@ function Hangman (currentGuess) {
         }
         //if number of guesses succeeded, output failure
         if (numberOfGuesses === 0) {
-            message = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]} Press any key to try again`;
+            message = `Sorry, you've run out of guesses. The word was ${wordList[gameNumber]}. Press any key to try again`;
             $("#gameover").text(message);
             done = true;
             $("#numwins").text(numberOfWins);
@@ -99,6 +99,6 @@ document.onkeyup = function (event) {
     // Captures the key press, converts it to lowercase, and saves it to a variable.
     var letter = String.fromCharCode(event.which).toLowerCase();
 
-    Hangman(letter);
+    wordGame(letter);
 
 }
