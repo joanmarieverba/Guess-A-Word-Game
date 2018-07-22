@@ -6,4 +6,6 @@ How it works:
 3. Press a key to guess a letter. Letter filled in if correct.   
 4. Screen displays which letters have been guessed already.  
 5. If correct, displays a success message. If incorrect, word is displayed and user can try again.  
+See it at <a href="http://joanmarieverba.name/guessword/">http://joanmarieverba.name/guessword/</a>  
+![alt text](guess-a-word.jpg)
 
